@@ -3,8 +3,7 @@ import { fetchNotionPage } from "../notion-client"
 import { NotionRenderer } from "react-notion";
 
 export async function getStaticProps() {
-  const data = await fetchNotionPage()
-  console.log(data)
+  const data = await fetchNotionPage("8ba5be25f1ab43ae8df02b5a3697bca2")
   return { props: { blockMap: data } }
 }
 
