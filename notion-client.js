@@ -1,4 +1,4 @@
-import fetch from "node-fetch"
+const fetch = require("node-fetch")
 
 export async function fetchNotionPage(notionPageId) {
     return fetch(`https://notion-api.splitbee.io/v1/page/${notionPageId}`).then(res => res.json())
